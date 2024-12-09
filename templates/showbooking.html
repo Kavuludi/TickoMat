@@ -1,0 +1,98 @@
+{% extends 'starter-page.html' %}
+
+{% load static %}
+
+{% block body %}
+    <div class="mt-5 mb-0">
+    <h1 class="text-center text-info">Your Bookings</h1>
+    
+    <table class="table table-info container">
+    <tr>
+        <th class="text-info">Name</th>
+        <th class="text-info">Email address</th>
+        <th class="text-info">Phone No.</th>
+        <th class="text-info">Datetime</th>
+        <th class="text-info">Depart</th>
+        <th class="text-info">Destination</th>
+        <th class="text-info">Bus RegNo.</th>
+        <th class="text-info">Seat No.</th>
+        <th class="text-info">Action</th>
+        <th class="text-info">Status</th>
+    </tr>
+    
+    {% for x in bookings %}
+        <tr>
+            <td>{{ x.name }}</td>
+            <td>{{ x.email }}</td>
+            <td>{{ x.phone }}</td>
+            <td>{{ x.date }}</td>
+            <td>{{ x.depart }}</td>
+            <td>{{ x.destination }}</td>
+            <td>{{ x.bus }}</td>
+            <td>{{ x.seatno }}</td>
+            <td>
+                <a href="/editbooking/{{ x.id}}" class="btn btn-warning"> Edit</a>
+                <a href="/delete/{{ x.id }}" class="btn btn-danger">Delete</a>
+                <a href="" class="btn btn-success"> Pay</a>
+            </td>
+        <td>
+            <a href="" class="btn btn info"></a>
+        </td>
+        </tr>
+    	
+    {% endfor %}
+    
+    </table>
+    
+    </div>
+    
+     <div class="container mt-4 mb-0 " data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "centeredSlides": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 0
+                },
+                "768": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-1.jpg"><img src="{% static 'assets/img/buses/bus3.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-2.jpg"><img src="{% static 'assets/img/buses/bus5.png' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-3.jpg"><img src="{% static 'assets/img/buses/bus3.jpeg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-4.jpg"><img src="{% static 'assets/img/buses/bus5.jpeg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-5.jpg"><img src="{% static 'assets/img/buses/bus7.jpeg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-6.jpg"><img src="{% static 'assets/img/buses/bus3.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-7.jpg"><img src="{% static 'assets/img/buses/bus2.jpg' %}" class="img-fluid" alt=""></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/img/event-gallery/event-gallery-8.jpg"><img src="{% static 'assets/img/buses/bus5.jpeg' %}" class="img-fluid" alt=""></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+	
+    
+{% endblock %}

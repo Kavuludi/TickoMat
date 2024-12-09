@@ -1,0 +1,41 @@
+{% extends 'starter-page.html' %}
+
+{% load static %}
+
+{% block body %}
+  <h1 class="text-center text-info">Your Booking</h1>
+    
+    <table class="table table-info container">
+    <tr>
+        <th class="text-info">Name</th>
+        <th class="text-info">Email address</th>
+        <th class="text-info">Phone No.</th>
+        <th class="text-info">Datetime</th>
+        <th class="text-info">Depart</th>
+        <th class="text-info">Destination</th>
+        <th class="text-info">Bus RegNo.</th>
+        <th class="text-info">Seat No.</th>
+    </tr>
+    
+    {% for x in bookings %}
+        <tr>
+            <td>{{ x.name }}</td>
+            <td>{{ x.email }}</td>
+            <td>{{ x.phone }}</td>
+            <td>{{ x.date }}</td>
+            <td>{{ x.depart }}</td>
+            <td>{{ x.destination }}</td>
+            <td>{{ x.bus }}</td>
+            <td>{{ x.seatno }}</td>
+            <td>
+                <a href="/edit/{{ x.id }}" class="btn btn-warning">Approve</a>
+                <a href="/delete/{{ x.id }}" class="btn btn-danger"> Decline</a>
+            </td>
+        </tr>
+    	
+    {% endfor %}
+    
+    
+    
+    </table>
+{% endblock %}

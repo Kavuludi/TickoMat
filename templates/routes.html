@@ -1,0 +1,134 @@
+{% extends 'starter-page.html' %}
+
+{% load static %}
+
+{% block body %}
+    <!-- Venue Section -->
+    <section id="venue" class="venue section">
+
+      <div class="container-fluid" data-aos="fade-up">
+            <div class="row justify-content-center">
+              <div class="col-11 col-lg-8 position-relative">
+                <!-- Appointment Section -->
+    <section id="appointment" class="appointment section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Find Trip</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <form method="POST" >
+            {% csrf_token %}
+            
+          <div class="row">
+            <div class="col-md-4 form-group mt-3">
+              <input type="datetime-local" name="date" class="form-control datepicker" id="date" placeholder="Trip Date" required="">
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="depart" id="depart" class="form-select" required="">
+                <option value="">Select Depart</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value="Kisumu">Kisumu</option>
+                <option value="Mombasa">Mombasa</option>
+              </select>
+            </div>
+            <div class="col-md-4 form-group mt-3">
+              <select name="doctor" id="doctor" class="form-select" required="">
+                <option value="">Select Destination</option>
+                <option value="Nakuru">Nakuru</option>
+                <option value="Eldoret">Eldoret</option>
+                <option value="Kisii">Kisii</option>
+              </select>
+            </div>
+          </div>
+          <div class="mt-3">
+            <div class="text-center"><button type="submit">Find Trip</button></div>
+          </div>
+        </form>
+
+      </div>
+
+    </section><!-- /Appointment Section -->
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="container-fluid venue-gallery-container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-0">
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{% static 'assets/img/buses/bus2.jpg' %}" class="glightbox" data-gall="venue-gallery">
+                <img src="{% static 'assets/img/buses/bus3.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{% static 'assets/img/buses/bus7.png' %}" class="glightbox" data-gall="venue-gallery">
+                <img src="{% static 'assets/img/buses/bus5.jpeg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{% static 'assets/img/buses/bus2.jpeg' %}" class="glightbox" data-gall="venue-gallery">
+                <img src="{% static 'assets/img/buses/bus7.jpeg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{% static 'assets/img/buses/bus1.jpg' %}" class="glightbox" data-gall="venue-gallery">
+                <img src="{% static 'assets/img/buses/bus2.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{% static 'assets/img/buses/bus1.jpg' %}" class="glightbox" data-gall="venue-gallery">
+                <img src="{% static 'assets/img/buses/bus3.png' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{% static 'assets/img/buses/bus5.jpeg' %}" class="glightbox" data-gall="venue-gallery">
+                <img src="{% static 'assets/img/buses/bus2.jpeg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{% static 'assets/img/buses/bus3.jpeg' %}" class="glightbox" data-gall="venue-gallery">
+                <img src="{% static 'assets/img/buses/bus2.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="venue-gallery">
+              <a href="{% static 'assets/img/buses/bus1.jpg' %}" class="glightbox" data-gall="venue-gallery">
+                <img src="{% static 'assets/img/buses/bus3.jpg' %}" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /Venue Section -->
+	
+{% endblock %}

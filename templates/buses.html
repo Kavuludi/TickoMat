@@ -1,0 +1,76 @@
+{% extends 'starter-page.html' %}
+{% load static %}
+
+{% block body %}
+	 <!-- Doctors Section -->
+    <section id="doctors" class="doctors section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Buses List</h2>
+        <p>Find all our buses</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{% static 'assets/img/buses/bus8.png' %}" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Toyota Airbus Modern</h4>
+                <span>33 Seater Comfy</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{% static 'assets/img/buses/bus9.jpeg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Isuzu Streamliner</h4>
+                <span>98 Seater Luxury</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{% static 'assets/img/buses/bus10.jpeg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Scania Extreme</h4>
+                <span>52 Seater Classic</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="team-member">
+              <div class="member-img">
+                <img src="{% static 'assets/img/buses/bus11.jpeg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Honda SoftCoach</h4>
+                <span>76 Seater Royal</span>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Doctors Section -->
+    
+    
+    
+    
+    
+{% endblock %}
